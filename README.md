@@ -1,3 +1,8 @@
+ATENÇÃO: Rodar python manage.py migrate no terminal dp projeto antes de python manage.py runserver senão não funciona e eu quase enlouqueço!!!
+
+Github do projeto Loja de Produtos:
+https://github.com/KateMorf/backend-django
+
 # Projeto E-commerce Django
 
 Este é um projeto básico de e-commerce desenvolvido com Django, focado na gestão de produtos com operações CRUD (Criar, Ler, Atualizar, Deletar).
