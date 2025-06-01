@@ -1,0 +1,38 @@
+<h1>Vendas</h1>
+<a href="{% url 'cria_venda' %}"><button type="button">Nova venda</button></a>
+
+<form method="get">
+    <label>Cliente:</label>
+    <input type="text" name="cliente">
+    <label>Data Início:</label>
+    <input type="date" name="data_inicio">
+    <label>Data Fim:</label>
+    <input type="date" name="data_fim">
+    <button type="submit">Filtrar</button>
+</form>
+
+<table>
+    <tr>
+        <th>Cliente</th>
+        <th>Produto</th>
+        <th>Quantidade</th>
+        <th>Data</th>
+        <th>Valor Total</th>
+        <th>Ações</th>
+    </tr>
+    {% for venda in vendas %}
+    <tr>
+        <td>{{ venda.cliente.nome }}</td>
+        <td>{{ venda.produto.nome }}</td>
+        <td>{{ venda.quantidade }}</td>
+        <td>{{ venda.data_venda }}</td>
+        <td>{{ venda.valor_total }}</td>
+        <td>
+            <a href="{% url 'edita_venda' venda.id %}">Editar</a>
+            <a href="{% url 'remove_venda' venda.id %}">Excluir</a>
+        </td>
+    </tr>
+    
+    {% endfor %}
+</table>
+<a href="{% url 'lista_produtos' %}"><button type="button">Voltar</button></a>

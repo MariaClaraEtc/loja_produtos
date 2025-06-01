@@ -1,0 +1,7 @@
+<h1>Excluir venda</h1>
+<p>Tem certeza que deseja excluir {{ vendas.nome }}?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Sim</button>
+    <a href="{% url 'lista_vendas' %}"><button type="button">Não</button></a>
+</form>

@@ -6,6 +6,12 @@
 </head>
 <body>
   {% block content %}{% endblock %}
+
+  <nav>
+    <a href="{% url 'lista_Cliente' %}">Lista de clientes</a>
+    <a href="{% url 'lista_vendas' %}">Lista de vendas</a>
+  </nav>
+
 </body>
 </html>
 
